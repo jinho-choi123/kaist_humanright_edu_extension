@@ -2,13 +2,21 @@
     "manifest_version": 3,
     "name": "KAIST HUMANRIGHT EDU EXTENSION",
     "version": "1.0",
+    "permission": ["scripting", "activeTab", "nativeMessaging"],
     "action": {
-        "default_popup": "popup.html"
+        "default_popup": "dist/popup.html"
     },
+    "host_permissions": [
+        "https://humanrights.kaist.ac.kr/*"
+    ],
     "content_scripts": [
         {
             "matches": ["https://humanrights.kaist.ac.kr/pages/contents/*"],
-            "js": ["./dist/contentScript.bundle.js"]
+            "js": ["dist/contentScript.bundle.js"]
         }
-    ]
+    ],
+    "web_accessible_resources": [{
+        "resources": ["dist/*.bundle.js"],
+        "matches": ["https://humanrights.kaist.ac.kr/*"]
+    }]
 }

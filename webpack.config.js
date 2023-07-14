@@ -1,10 +1,15 @@
 const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
-    entry: './src/contentScript.js',
+    entry: {
+        contentScript: './src/contentScript.js',
+        inject: './src/inject.js',
+    },
     output: {
-        filename: 'contentScript.bundle.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
-    watch: true,
+    plugins: [
+    ]
 }
