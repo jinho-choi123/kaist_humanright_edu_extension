@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "KAIST HUMANRIGHT EDU EXTENSION",
     "version": "1.0",
-    "permission": ["scripting", "activeTab", "nativeMessaging"],
+    "permissions": ["scripting", "activeTab"],
     "action": {
         "default_popup": "dist/popup.html"
     },
