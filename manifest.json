@@ -3,9 +3,6 @@
     "name": "KAIST HUMANRIGHT EDU EXTENSION",
     "version": "1.0",
     "permissions": ["scripting", "activeTab"],
-    "action": {
-        "default_popup": "dist/popup.html"
-    },
     "host_permissions": [
         "https://humanrights.kaist.ac.kr/*"
     ],
